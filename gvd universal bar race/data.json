@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Car Production by Country",
+    "subtitle": "Annual Vehicle Production (Units, OICA-based Estimates)"
+  },
+  "data": {
+    "1950":{
+      "usa": 8005000,
+      "japan": 31597,
+      "germany": 306064,
+      "china": 3000,
+      "south_korea": 3000,
+      "france": 700000,
+      "uk": 800000,
+      "italy": 650000
+    },
+    "1960":{
+      "usa": 9000000,
+      "japan": 500000,
+      "germany": 1200000,
+      "china": 50000,
+      "south_korea": 40000,
+      "france": 900000,
+      "uk": 900000,
+      "italy": 850000
+    },
+    "1970":{
+      "usa": 10000000,
+      "japan": 2000000,
+      "germany": 2500000,
+      "china": 150000,
+      "south_korea": 200000,
+      "france": 1400000,
+      "uk": 1200000,
+      "italy": 1000000
+    },
+    "1980":{
+      "usa": 11000000,
+      "japan": 6500000,
+      "germany": 3500000,
+      "china": 350000,
+      "south_korea": 700000,
+      "france": 1800000,
+      "uk": 1400000,
+      "italy": 1200000
+    },
+    "1990":{
+      "usa": 13000000,
+      "japan": 9000000,
+      "germany": 5000000,
+      "china": 800000,
+      "south_korea": 1200000,
+      "france": 2100000,
+      "uk": 1500000,
+      "italy": 1400000
+    },
+    "2000":{
+      "usa": 15000000,
+      "japan": 10000000,
+      "germany": 6500000,
+      "china": 2000000,
+      "south_korea": 2000000,
+      "france": 2300000,
+      "uk": 1600000,
+      "italy": 1500000
+    },
+    "2005":{
+      "usa": 14500000,
+      "japan": 10500000,
+      "germany": 7000000,
+      "china": 6000000,
+      "south_korea": 3000000,
+      "france": 2400000,
+      "uk": 1500000,
+      "italy": 1400000
+    },
+    "2010":{
+      "usa": 12500000,
+      "japan": 9000000,
+      "germany": 6800000,
+      "china": 16000000,
+      "south_korea": 4000000,
+      "france": 2200000,
+      "uk": 1400000,
+      "italy": 1300000
+    },
+    "2012": {
+      "usa": 12100000,
+      "japan": 8800000,
+      "germany": 6700000,
+      "china": 19200000,
+      "south_korea": 4200000,
+      "france": 2100000,
+      "uk": 1350000,
+      "italy": 1200000
+    },
+    "2015":{
+      "usa": 11500000,
+      "japan": 8500000,
+      "germany": 6500000,
+      "china": 23000000,
+      "south_korea": 4500000,
+      "france": 2000000,
+      "uk": 1200000,
+      "italy": 1100000
+    },
+    "2020":{
+      "usa": 10500000,
+      "japan": 8000000,
+      "germany": 6000000,
+      "china": 26000000,
+      "south_korea": 4200000,
+      "france": 1600000,
+      "uk": 900000,
+      "italy": 900000
+    },
+    "2023":{
+      "usa": 10611155,
+      "japan": 8997440,
+      "germany": 4109371,
+      "china": 30160966,
+      "south_korea": 4243597,
+      "france": 1505076,
+      "uk": 1025474,
+      "italy": 880085
+    },
+    "2025":{
+      "usa": 9500000,
+      "japan": 8000000,
+      "germany": 4300000,
+      "china": 28000000,
+      "south_korea": 4200000,
+      "france": 1500000,
+      "uk": 800000,
+      "italy": 850000
+    }
+  }
+}

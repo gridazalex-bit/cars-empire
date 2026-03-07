@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Global Data Visuals</title>
+    
+    <link rel="icon" href="data:,">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="assets/paper-texture.png" as="image">
+    <link rel="preload" href="assets/pencil-fill.png" as="image">
+    
+    <link rel="prefetch" href="assets/mascot-texture.png" as="image">
+    <link rel="prefetch" href="assets/hand-texture.png" as="image">
+    <link rel="prefetch" href="assets/crown.png" as="image">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <h1 id="title">The Rise and Fall of Car Empires</h1>
+
+    <p class="subtitle" id="subtitle">
+      75 Years of Global Vehicle Production (1950–2025)
+    </p>
+
+    
+
+  </header>
+
+
+  <!-- YEAR -->
+
+  <div id="yearBox" class="year-box">1950</div>
+  <!-- Leader banner removed (not needed) -->
+
+
+  <!-- MAIN CONTENT -->
+
+  <div class="content">
+
+    <!-- LEFT — MASCOT -->
+
+    <img
+      src="assets/global-texture.png"
+      class="mascot"
+      alt="Global Data Visuals mascot"
+    />
+
+    <!-- CENTER — CHART -->
+
+    <div id="chart" class="chart"></div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <!-- SOURCE ROW -->
+    <div class="source-row">
+
+      <span id="sourceText">Source: OICA Statistics (1950–2023) & 2025 Industry Projections</span>
+
+      <img
+        src="assets/hand-texture.png"
+        class="hand"
+        alt="Hand writing source"
+      />
+
+    </div>
+
+
+    <!-- BRAND ROW -->
+    <div class="brand-row">
+
+      <img
+        src="assets/mascot-texture.png"
+        class="footer-mascot"
+        alt="Global Visual Data mascot"
+      />
+
+      <div class="brand-text">
+
+        <div class="brand">GLOBAL DATA VISUALS</div>
+
+        <div class="copyright">
+          © Global Data Visuals. All rights reserved.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>
+
+<!-- LOAD SCRIPT AFTER PAGE -->
+<script src="script.js"></script>
+<audio id="bgMusic" loop>
+  <source src="assets/music/Quantum_Cascade.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
