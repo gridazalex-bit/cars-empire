@@ -2,9 +2,12 @@
    GLOBAL RESET
 ========================================================= */
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -13,26 +16,24 @@ html, body {
   color: #2c3e50;
 }
 
-
 /* =========================================================
    BACKGROUND & TEXTURES
 ========================================================= */
 
-body { background: #f3ecd7; }
+body {
+  background: #f3ecd7;
+}
 
 .app {
   height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-
   background:
-    linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)),
+    linear-gradient(rgba(255, 255, 255, .35), rgba(255, 255, 255, .35)),
     url("assets/paper-texture.png");
-
   background-size: cover;
   background-position: center;
-
   padding: 18px 40px;
 }
 
@@ -45,7 +46,7 @@ body { background: #f3ecd7; }
     repeating-linear-gradient(
       transparent,
       transparent 27px,
-      rgba(120,150,200,.18) 28px
+      rgba(120, 150, 200, .18) 28px
     );
   pointer-events: none;
 }
@@ -58,10 +59,9 @@ body { background: #f3ecd7; }
   bottom: 0;
   left: 95px;
   width: 2px;
-  background: rgba(220,80,80,.45);
+  background: rgba(220, 80, 80, .45);
   pointer-events: none;
 }
-
 
 /* =========================================================
    HEADER
@@ -84,7 +84,6 @@ body { background: #f3ecd7; }
   color: #5f6f7f;
 }
 
-
 /* =========================================================
    YEAR DISPLAY
 ========================================================= */
@@ -100,20 +99,16 @@ body { background: #f3ecd7; }
 .year-box {
   margin: 8px auto;
   padding: 8px 18px;
-
   font-size: 28px;
   font-weight: 900;
-
   border: 2px solid #3c3c3c;
   border-radius: 8px;
-
   background:
     url("assets/pencil-fill.png"),
     linear-gradient(#a9c1e6, #8aa7d3);
-  box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
   background-size: cover;
   background-blend-mode: multiply;
-
   display: inline-block;
   width: fit-content;
   max-width: 100%;
@@ -122,7 +117,6 @@ body { background: #f3ecd7; }
 .mascot {
   width: 110px;
 }
-
 
 /* =========================================================
    CONTENT (CHART AREA)
@@ -133,11 +127,9 @@ body { background: #f3ecd7; }
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-
   padding-left: 140px; /* Stay inside the notebook margin */
   padding-top: 6px;
 }
-
 
 /* =========================================================
    CHART CONTAINER
@@ -146,12 +138,10 @@ body { background: #f3ecd7; }
 .chart {
   width: 100%;
   max-width: 900px;
-
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 
 /* =========================================================
    BAR ROW STRUCTURE
@@ -162,8 +152,7 @@ body { background: #f3ecd7; }
   grid-template-columns: 45px 150px 1fr;
   align-items: center;
   gap: 8px;
-  transition: transform 0.6s cubic-bezier(.22,1,.36,1);
-
+  transition: transform 0.6s cubic-bezier(.22, 1, .36, 1);
 }
 
 .rank {
@@ -186,11 +175,7 @@ body { background: #f3ecd7; }
   object-fit: cover;
   border: none;
   background: transparent;
-  
-  
 }
-
-
 
 /* =========================================================
    BARS & VALUES
@@ -208,22 +193,17 @@ body { background: #f3ecd7; }
   height: 40px;
   border-radius: 8px;
   border: 2px solid #3c3c3c;
-
   background:
     url("assets/pencil-fill.png"),
     linear-gradient(#a9c1e6, #8aa7d3);
-
   background-size: cover;
   background-blend-mode: multiply;
-
   min-width: 4px;
   max-width: 520px;
-
-  transition: width 0.8s cubic-bezier(.22,1,.36,1);
-
+  transition: width 0.8s cubic-bezier(.22, 1, .36, 1);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.65),
-    0 3px 8px rgba(0,0,0,.15);
+    inset 0 1px 0 rgba(255, 255, 255, .65),
+    0 3px 8px rgba(0, 0, 0, .15);
 }
 
 .bar-value {
@@ -232,35 +212,30 @@ body { background: #f3ecd7; }
   min-width: 90px;
 }
 
-
 /* =========================================================
    LEADER STYLES (GOLD BAR + CROWN)
 ========================================================= */
 
 .bar.leader {
   border-width: 3px;
-
   background:
     url("assets/pencil-fill.png"),
     linear-gradient(#ffe89a, #f5c84d);
-
   color: #6b5200;
-
   box-shadow:
-    0 0 18px rgba(255,210,80,.55),
-    inset 0 1px 0 rgba(255,255,255,.9);
+    0 0 18px rgba(255, 210, 80, .55),
+    inset 0 1px 0 rgba(255, 255, 255, .9);
 }
 
 /* Desktop Crown Size */
 .crown {
-  width: 80px; 
+  width: 80px;
   position: absolute;
   top: -40px;
   left: -65px;
   z-index: 10;
   transition: all 0.5s ease;
 }
-
 
 /* =========================================================
    SOURCE (DESKTOP)
@@ -290,7 +265,6 @@ body { background: #f3ecd7; }
   width: 220px;
   filter: sepia(0.2) opacity(0.8);
 }
-
 
 /* =========================================================
    FOOTER
@@ -322,7 +296,6 @@ body { background: #f3ecd7; }
   color: #7f8c8d;
 }
 
-
 /* =========================================================
    START OVERLAY
 ========================================================= */
@@ -330,7 +303,7 @@ body { background: #f3ecd7; }
 #startOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -343,7 +316,7 @@ body { background: #f3ecd7; }
   border: 3px solid #3c3c3c;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .start-btn {
@@ -364,119 +337,129 @@ body { background: #f3ecd7; }
   background: #ff6b81;
 }
 
-
 /* =========================================================
-   MOBILE & VERTICAL OPTIMIZATION (TikTok / Reels / Red)
+   MOBILE & VERTICAL OPTIMIZATION (High-Pro Standard)
 ========================================================= */
 
 @media (max-width: 768px) or (orientation: portrait) {
   .app {
-    /* Safe-zone padding for 2026 UI overlays */
-    padding: 240px 60px 450px 20px;
+    padding: 10vh 5vw 15vh 5vw; /* Dynamic Safe Zones for UI overlays */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* Spreads elements naturally */
     background-size: cover;
   }
 
-  .content {
-    padding-left: 0; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .chart {
-    width: 100%;
-    max-width: 100%;
-    gap: 6px;
-  }
-
-  .bar {
-    height: 24px;
-  }
-
-  .bar-row {
-    grid-template-columns: 25px 90px 1fr;
-    gap: 4px;
-  }
-
-  .bar-label {
-    font-size: 11px;
-  }
-
-  .flag {
-    width: 30px;
-    height: 20px;
-  }
-
-  .bar-value {
-    font-size: 11px;
-    min-width: 60px;
-  }
-
-/* MOBILE SOURCE: 2026 Responsive Fluid Layout */
-.source-row {
-  position: absolute;
-  top: 185px; 
-  left: 50%;
-  transform: translateX(-50%);
-  
-  /* Use max-width with a percentage so it never overflows the screen */
-  width: 90%; 
-  max-width: 280px; 
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  opacity: 0.8; /* Slightly higher for better recording clarity */
-  z-index: 10;
-}
-
-#sourceText {
-  font-family: "Patrick Hand", cursive;
-  font-size: 13px; /* Slightly larger for mobile readability */
-  color: #5f6f7f;
-  text-align: center;
-  line-height: 1.4;
-  
-  /* Critical for the "Rise and Fall" wrapping */
-  white-space: normal;
-  overflow-wrap: break-word;
-  text-wrap: balance; 
-}
-
-  .hand {
-    display: none;
-  }
-
-  /* Mobile Crown Size (Properly scoped) */
-  .crown {
-    width: 45px;
-    top: -20px;
-    left: -25px;
-  }
-
+  /* 1. HEADER AREA: Static at the top */
   .header {
-    position: absolute;
-    top: 40px;
+    position: relative; /* Remove absolute to prevent overlap */
+    top: 0;
     width: 100%;
+    margin-bottom: 5px;
   }
 
   .header h1 {
-    font-size: 20px;
+    font-size: clamp(18px, 6vw, 24px);
     letter-spacing: -0.5px;
+    margin: 0;
   }
 
   .subtitle {
     font-size: 11px;
+    margin-top: 2px;
   }
 
+  /* 2. YEAR BOX: Key visual hook */
   .year-box {
-    font-size: 32px;
-    padding: 5px 15px;
-    margin-top: 100px;
+    position: relative;
+    margin: 10px auto;
+    font-size: 38px; /* Larger for mobile impact */
+    padding: 8px 20px;
+    z-index: 20;
   }
-} /* <--- This correctly closes the mobile media query */
+
+  /* 3. THE CHART: Centered Action Zone */
+  .content {
+    padding-left: 0;
+    width: 100%;
+    flex: 1; /* Takes up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical center of the screen */
+    align-items: center;
+  }
+
+  .chart {
+    width: 95%;
+    gap: 8px; /* Slightly more space for clarity */
+  }
+
+  .bar-row {
+    grid-template-columns: 30px 100px 1fr; /* Optimized for car names */
+    gap: 6px;
+  }
+
+  .bar {
+    height: 30px; /* Thicker bars look more professional on mobile */
+  }
+
+  .bar-label {
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .flag {
+    width: 32px;
+    height: 22px;
+    object-fit: contain;
+  }
+
+  .bar-value {
+    font-size: 12px;
+    min-width: 70px;
+    font-weight: 800;
+  }
+
+  /* 4. SOURCE AREA: Bottom of the Safe Zone */
+  .source-row {
+    position: relative; /* Switch to relative to sit below chart */
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 90%;
+    margin-top: 15px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #sourceText {
+    font-size: 12px;
+    text-align: center;
+    max-width: 300px;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  .hand {
+    display: block; /* Show hand on mobile but scale it down */
+    width: 110px;
+    margin: 5px auto;
+    filter: sepia(0.2) opacity(0.8);
+  }
+
+  /* 5. OVERLAYS & CROWN */
+  .crown {
+    width: 40px;
+    top: -22px;
+    left: -18px;
+  }
+
+  /* Disable notebook margin line on mobile to maximize horizontal bar space */
+  .app::after {
+    display: none;
+  }
+}
