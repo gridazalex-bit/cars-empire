@@ -343,172 +343,144 @@ body {
 
 @media (max-width: 768px) or (orientation: portrait) {
   .app {
-    /* vh units ensure the "Action Zone" is centered on any phone */
-    padding: 5vh 5vw 8vh 5vw; 
+    /* Use vh for padding to ensure footer stays on screen */
+    padding: 4vh 5vw 4vh 5vw !important; 
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-size: cover;
+    height: 100vh;
   }
 
   /* 1. HEADER AREA */
   .header {
-    position: relative;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     z-index: 10;
   }
 
   .header h1 {
-    font-size: clamp(18px, 6vw, 24px);
-    letter-spacing: -0.5px;
+    font-size: clamp(18px, 5.5vw, 22px);
     margin: 0;
   }
 
   .subtitle {
-    font-size: 11px;
-    margin-top: 2px;
-  }
-
-  /* 2. BRANDING ROW: Mascot + Year next to each other */
-  .year-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 10px 0 15px 0;
-    width: 100%;
-  }
-
-  .mascot {
-    width: 75px; /* Professional scale for mobile */
-    height: auto;
+    font-size: 10px;
     margin: 0;
   }
 
-  .year-box {
-    position: relative;
-    margin: 0; 
-    font-size: 34px;
-    padding: 6px 18px;
-    z-index: 20;
-    width: auto;
+  /* 2. THE BRANDING ROW (Mascot left of Year) */
+  .year-wrapper {
+    display: flex !important;
+    flex-direction: row !important; /* Forces horizontal */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 5px 0; /* Minimal bottom margin to save space */
+    width: 100%;
+    height: auto;
   }
 
-  /* 3. THE CHART: Moved up to occupy Mascot's old space */
+  /* Move mascot to the left of the year */
+  .mascot {
+    width: 65px !important; 
+    height: auto;
+    margin: 0 !important;
+    order: 1; /* Ensures it stays left */
+  }
+
+  .year-box {
+    order: 2; /* Ensures it stays right of mascot */
+    font-size: 32px !important;
+    padding: 5px 15px !important;
+    margin: 0 !important;
+    width: fit-content;
+  }
+
+  /* 3. THE CHART AREA (Moving it UP) */
   .content {
-    padding-left: 0;
+    padding-left: 0 !important;
     width: 100%;
     flex: 1; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keeps the race focused at the top */
+    justify-content: flex-start; 
     align-items: center;
-    margin-top: 0;
+    margin-top: -5px; /* Pulls chart up closer to the year */
   }
 
   .chart {
     width: 98%;
-    gap: 6px;
+    gap: 4px; /* Tighter gap to keep everything visible */
   }
 
   .bar-row {
-    grid-template-columns: 28px 95px 1fr;
-    gap: 5px;
+    grid-template-columns: 25px 85px 1fr;
+    gap: 4px;
+    height: 28px; /* Fixed height to control total chart size */
   }
 
   .bar {
-    height: 30px; 
-    max-width: 100%; /* Ensures bars don't shoot off screen */
+    height: 24px !important; 
   }
 
-  .bar-label {
-    font-size: 12px;
-    font-weight: 900;
-  }
+  .bar-label { font-size: 11px; }
+  .flag { width: 28px; height: 18px; }
+  .bar-value { font-size: 11px; min-width: 55px; }
 
-  .flag {
-    width: 30px;
-    height: 20px;
-    object-fit: contain;
-  }
-
-  .bar-value {
-    font-size: 12px;
-    min-width: 65px;
-    font-weight: 800;
-  }
-
-  /* 4. FOOTER AREA: Restored and Visible */
+  /* 4. FOOTER AREA (Forced visibility) */
   .source-row {
-    position: relative;
-    width: 100%;
-    margin-top: 15px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
-    z-index: 30;
+    width: 100%;
+    margin-top: 5px; /* Very tight to the chart */
+    padding: 0;
   }
 
   #sourceText {
-    font-family: "Patrick Hand", cursive;
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
-    max-width: 85%;
-    line-height: 1.3;
-    color: #5f6f7f;
+    line-height: 1.2;
+    max-width: 90%;
+    margin: 0;
   }
 
   .hand {
-    display: block !important; /* Forces the hand back into view */
-    width: 100px;
-    margin: 8px auto 0 auto;
-    filter: sepia(0.2) opacity(0.8);
+    display: block !important;
+    width: 80px !important; /* Smaller to save space */
+    margin: 2px auto !important;
   }
 
   .footer {
-    width: 100%;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin-top: auto; /* Pushes to absolute bottom of padding */
+    padding-bottom: 5px;
   }
 
   .brand-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    opacity: 0.9;
+    gap: 6px;
   }
 
-  .footer-mascot {
-    width: 50px;
-  }
-
-  .brand {
-    font-size: 14px;
-    font-weight: 900;
-  }
-
-  .copyright {
-    font-size: 10px;
-    color: #7f8c8d;
-    margin-top: 4px;
-  }
+  .footer-mascot { width: 40px; }
+  .brand { font-size: 13px; }
+  .copyright { font-size: 9px; margin-top: 2px; }
 
   /* 5. CROWN SIZE */
   .crown {
-    width: 38px;
-    top: -20px;
-    left: -15px;
+    width: 34px;
+    top: -18px;
+    left: -12px;
   }
 
-  /* Remove notebook lines for cleaner mobile data focus */
+  /* Disable notebook lines for absolute maximum space */
   .app::before, .app::after {
-    display: none;
+    display: none !important;
   }
 }
